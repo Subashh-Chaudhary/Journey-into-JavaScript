@@ -1,0 +1,167 @@
+
+
+Object-oriented programming (OOP) is a programming paradigm that is based on the concept of objects. In JavaScript, an object is a collection of data and methods that operate on that data. JavaScript is a versatile language that supports OOP, although it uses a prototype-based inheritance model rather than a class-based one.
+
+
+1. Abstraction
+          Abstraction is one of the key principles of object-oriented programming (OOP). It refers to the concept of simplifying complex reality by modeling classes based on the essential properties and behaviors an object should have. In JavaScript, you can achieve abstraction by encapsulating data and functionality within objects and exposing only the necessary information to the outside world.
+
+                    // Encapsulation and Abstraction
+                    function BankAccount(accountNumber, balance) {
+                    let _accountNumber = accountNumber; // Private variable
+                    let _balance = balance;
+
+                    this.getAccountNumber = function() {
+                    return _accountNumber;
+                    };
+
+                    this.getBalance = function() {
+                    return _balance;
+                    };
+
+                    this.deposit = function(amount) {
+                    _balance += amount;
+                    };
+
+                    this.withdraw = function(amount) {
+                    if (_balance >= amount) {
+                    _balance -= amount;
+                    } else {
+                    console.log("Insufficient funds");
+                    }
+                    };
+                    }
+
+                    let account = new BankAccount("123456", 1000);
+                    console.log(account.getAccountNumber()); // Output: 123456
+                    console.log(account.getBalance()); // Output: 1000
+                    account.deposit(500);
+                    console.log(account.getBalance()); // Output: 1500
+                    account.withdraw(2000); // Output: Insufficient funds
+
+
+
+
+
+2. Encapsulation: 
+          Encapsulation is a fundamental aspect of abstraction. It involves bundling data (properties) and functions (methods) that operate on that data into an object. This allows you to hide the internal details of how an object works, providing a clean and simple interface for interacting with it.
+
+
+3. Inheritance:
+          Inheritance is a fundamental concept in object-oriented programming (OOP) that allows you to create new objects that are based on existing objects. In JavaScript, inheritance is achieved through prototype-based inheritance, as opposed to class-based inheritance found in some other programming languages like Java or C++. 
+
+                    //Inheritance
+                    function Student(name, age, grade) {
+                    Person.call(this, name, age);
+                    this.grade = grade;
+                    }
+
+                    // Inherit from Person
+                    Student.prototype = Object.create(Person.prototype);
+                    Student.prototype.constructor = Student;
+
+                    let student = new Student("Bob", 20, "A");
+                    student.greet(); // Output: Hello, my name is Bob
+                    student.sayAge(); // Output: I am 20 years old.
+
+
+
+4. Polymorphism:
+          Polymorphism is a fundamental concept in object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common super-class. It enables you to write code that can work with objects in a more generic and flexible way, without needing to know their specific types. Polymorphism in JavaScript is often implemented through method overriding and dynamic method dispatch.
+
+
+
+
+5. Objects: 
+          In JavaScript, objects are collections of key-value pairs. You can create objects using object literals or using the new Object() constructor.
+          javascript.
+
+                    // Object literal
+                    let person = {
+                    name: "John",
+                    age: 30,
+                    greet() {
+                    console.log("Hello, my name is " + this.name);
+                    }
+                    };
+
+                    // Constructor function
+                    function Person(name, age) {
+                    this.name = name;
+                    this.age = age;
+                    this.greet = function() {
+                    console.log("Hello, my name is " + this.name);
+                    };
+                    }
+
+                    let person2 = new Person("Alice", 25);
+
+
+
+6. Prototypes: 
+          Every JavaScript object has a prototype. Prototypes allow objects to inherit properties and methods from other objects. You can add properties and methods to an object's prototype using Object.prototype or by defining constructor functions.
+          javascript.
+                    // Prototype method
+                    Person.prototype.sayAge = function() {
+                    console.log("I am " + this.age + " years old.");
+                    };
+
+                    person.sayAge(); // Output: I am 30 years old.
+
+
+
+
+
+
+a. new Keyword:
+Purpose:
+The new keyword in JavaScript is primarily used for creating instances of user-defined object types, also known as constructor functions. When you create an object using new, it performs the following steps:
+
+Creates a new empty object: It creates a new empty object.
+Links to an object's prototype: It sets the prototype of the newly created object to the prototype property of the constructor function.
+Binds this to the new object: It binds this to the newly created object within the constructor function.
+Returns the newly created object: It returns the newly created object unless the constructor function returns an object explicitly.
+
+Example:
+          function Person(name, age) {
+          this.name = name;
+          this.age = age;
+          }
+          var person1 = new Person("Alice", 30);
+
+          In this example, person1 is an instance of the Person constructor function created using the new keyword.
+
+
+b. this Keyword:
+Purpose:
+In JavaScript, this refers to the context in which a function is executed. The value of this is determined by how a function is called. It is a special keyword that is dynamically scoped and its value depends on the context in which a function is called.
+
+Usage:
+In Constructors: Inside a constructor function, this refers to the newly created object.
+          function Person(name, age) {
+          this.name = name;
+          this.age = age;
+          }
+
+In Methods: Inside methods of an object, this refers to the object itself.
+          var person = {
+          name: "Alice",
+          greet: function() {
+          console.log("Hello, my name is " + this.name);
+          }
+          };
+          
+In Global Scope: In the global scope or in functions not called as methods of an object, this refers to the global object (window in browsers, global in Node.js).
+          console.log(this); // Outputs: Window object (in browser)
+          var name = "Global";
+          function greet() {
+          console.log("Hello, " + this.name);
+          }
+          var obj = {
+          name: "Object",
+          greet: greet
+          };
+          greet(); // Outputs: Hello, Global
+          obj.greet(); // Outputs: Hello, Object
+          
+          In the above example, when greet is called directly, this refers to the global object, but when it's called as a method of obj, this refers to obj.

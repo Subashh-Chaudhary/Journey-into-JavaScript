@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Fetching API</title>
+          <style>
+                     body{
+                              background-color: #414141;
+                              color: white;
+                              font-weight: bolder;
+
+                     }
+
+                     .container{
+                              margin: 15% 43%;
+                     }
+
+                     .card{
+                              height: 320px;
+                              width: 280px;
+                              /* border: 1px solid white; */
+                              padding-left: 15px;
+                     }
+
+                     #btn{
+                              margin-top: 15px;
+                              margin-left: 26%;
+                              height: 40px;
+                              width: 150px;
+                              font-size: 20px;
+                              font-weight: bolder;
+                     }
+                     .image{
+                              margin-left: 25px;
+                              margin-top: 10px;
+                     }
+          </style>
+</head>
+<body>
+
+          <div class="container">
+                    <div class="card"></div> 
+                    <button id="btn">Get ID</button>
+          </div>
+  
+
+</body>
+
+<script>
+          let data;
+
+          fetch('https://api.github.com/users/hiteshchoudhary')
+          .then((response) =>{
+                    return response.json();
+          })
+          .then((datas) =>{
+                    data = datas;
+                    console.log(datas);
+          })
+          .catch((error) =>{
+                    console.log(`Error : ${error}`);
+          })
+          .finally(() =>{
+                    console.log("Finally fetching is completed...")
+          })
+          
+
+         const btn = document.querySelector('#btn');
+
+         btn.addEventListener('click', () =>{
+          console.log('Click event is working');
+          let cardd = document.querySelector('.card');
+          cardd.innerHTML = `
+          <img src="" class="image"></img>
+          <div class="count"></div>
+          `;
+          cardd.style.border = "1px solid white";
+
+          setTimeout(function(){ 
+          let image = document.querySelector('.image');
+          image.style.height = '200px';
+          image.style.width = '200px';
+          image.setAttribute("src", `${data.avatar_url}`);
+          }, 800)
+
+          
+
+
+          setTimeout(function(){
+                    let countt = document.querySelector('.count');
+                    countt.innerHTML = `Id : ${data.id} <br>Name : ${data.name} <br> Location : ${data.location} <br> Followers count : ${data.followers}`;     
+          }, 1800)
+          
+         })
+
+
+
+</script>
+
+</html>

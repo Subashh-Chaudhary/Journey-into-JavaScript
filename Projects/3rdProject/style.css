@@ -1,0 +1,33 @@
+*{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+}
+
+body{
+          height: 100vh;
+          width: 100vw;
+          background-color: #212121;
+          color: white;
+}
+
+.container{
+          text-align: center  ;
+          margin: 20% auto;
+}
+h2{
+          margin-bottom: 10px;
+          font-size: 25px;
+}
+.time-date{
+          height: 10vh;
+          width: 25vW;
+          border: 2px solid rgb(241, 241, 241);
+          border-radius: 5px;
+          background-color:rgba(246, 246, 112, 0.686);
+          margin: auto;
+          color: white;
+          font-size: 40px;
+          font-weight: bold;
+          padding-top: 20px;
+}

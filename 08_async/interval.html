@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Timeout Concept</title>
+          <style>
+                    body{
+                              color: whitesmoke;
+                              background-color: #414141;
+                    }
+
+                    div{
+                              text-align: center;
+                              margin-top: 17%;
+
+                    }
+                    
+                    button{
+                              height: 40px;
+                              width: 200px;
+                              color: white;
+                              background-color: rgb(42, 42, 42);
+                              border-radius: 5px;
+                              font-size: 20px;
+
+                    }
+          </style>
+</head>
+<body>
+          <div>
+                    <h1>Async javaScript</h1>
+                    <button id="start">Start</button> <br><br>
+                    <button id="stop">Stop</button>
+          </div>
+</body>
+
+<script>
+          const strt = document.querySelector('#start');
+          const stp = document.querySelector('#stop');
+          const text = document.querySelector('h1');
+
+          let func = function(){
+                    let date = new Date();
+                    console.log(`Date : ${date.toString()}`);
+                    text.innerHTML = `Date : ${date.toString()}`;
+          }
+
+          let intrvl;
+
+          strt.addEventListener('click', function(){
+                    intrvl = setInterval(func, 1000);
+                    console.log('Interval is started...');
+          })
+
+          stp.addEventListener('click', function(){
+                    clearInterval(intrvl);
+                    console.log('Interval is cleared...')
+          })
+
+</script>
+
+</html>

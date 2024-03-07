@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #212121;
+}
+
+.container {
+  height: 720px;
+  width: 600px;
+  background-color: gray;
+  margin: 100px auto; 
+}
+
+h1{
+  padding-top: 20px;
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+  font-weight: 300;
+  -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+  color: transparent;
+}
+
+p{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+input{
+  height: 65px;
+  width: 450px;
+  margin: 10% 12.5%;
+  border: 7px solid #212121;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+
+.center{
+  height: 50px;
+  width: 450px;
+  margin: 0px auto;
+  font-size: 23px;
+}
+.center-button{
+  height: 40px;
+  width: 200px;
+  margin: 0px 35%;
+  border: 2px solid #212121;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: rgb(141, 141, 141);
+  color : white;
+  font-size: 20px; 
+  font-weight: bold;
+}
+
+
+h3{
+  text-align: center;
+  padding-top: 15px;
+}
+
+
+.guessed-numbers{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#new{
+  background-color: #212121;
+  height: 50px;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 15px 35%;
+}
+

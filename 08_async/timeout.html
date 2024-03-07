@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Timeout Concept</title>
+          <style>
+                    body{
+                              color: whitesmoke;
+                              background-color: #414141;
+                    }
+
+                    div{
+                              text-align: center;
+                              margin-top: 17%;
+
+                    }
+                    
+                    button{
+                              height: 40px;
+                              width: 200px;
+                              color: white;
+                              background-color: rgb(42, 42, 42);
+                              border-radius: 5px;
+                              font-size: 20px;
+
+                    }
+          </style>
+</head>
+<body>
+          <div>
+                    <h1>Async javaScript</h1>
+                    <button id="stop">Stop</button>
+          </div>
+</body>
+
+<script>
+          const stp = document.querySelector('#stop');
+          const text = document.querySelector('h1');
+
+          let func = function(){
+                    text.innerHTML = "Async javaScript with Hitesh Bhaii."
+          }
+
+          const timeout = setTimeout(func, 2000);
+
+          stp.addEventListener('click', function(){
+                    clearTimeout(timeout);
+                    console.log('Time out is cleared...')
+          })
+
+</script>
+
+</html>

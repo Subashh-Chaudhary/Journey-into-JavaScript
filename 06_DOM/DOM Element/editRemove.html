@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+          <ul class="language">
+               <li class="item">C</li>     
+          </ul>
+          
+          
+</body>
+
+<script>
+          const items = ['Java', 'JavaScript', 'Python', "C++", "Ruby"];
+          const languages = document.querySelector('.language');
+          const listItem = (item) =>{
+                    
+                    const list = document.createElement('li');
+
+                    list.appendChild(document.createTextNode(item));
+                    languages.appendChild(list);
+          }
+
+          for(let i = 0; i < 5; i++){
+                    listItem(items[i])
+          }
+
+          // edit
+          const lastLang = document.querySelector('li:nth-child(6)');
+          const newLang = document.createElement('li');
+          newLang.textContent = "Mojo";
+          lastLang.replaceWith(newLang)
+
+          // remove
+          const secLastLang = document.querySelector('li:nth-child(5)');
+          secLastLang.remove();
+</script>
+
+</html>

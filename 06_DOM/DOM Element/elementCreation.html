@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Element Creation</title>
+  </head>
+  <body>
+          <div id="container"></div>
+</body>
+  <script>
+          const contain = document.getElementById('container');
+          contain.style.display = 'flex';
+
+          const color = ['white', 'red', 'green', 'black', 'brown','black', 'red'];
+          const bgcolor = ['#212121', 'yellow', 'red', 'blue', 'yellow', 'green', '#212121'];
+          const height = ['200px'];
+          const width = ['400px'];
+          const text = ['my name is Don', 'my name is John Cena', 'my name is Salman Khan', 'my name is Saarukh khan', 'I am Thor, the odin son', 'I got you baby', 'Dont judge a book by its cover'];
+          const align = ['center'];
+          const padding = ['10%'];
+
+
+    const createDiv = (color, bgcolor, height, width, text, align, padding) => {
+      const divElement = document.createElement('div');
+      divElement.style.color = color;
+      divElement.style.backgroundColor = bgcolor;
+      divElement.style.height = height;
+      divElement.style.width = width;
+      divElement.style.textAlign = align;
+      divElement.style.paddingTop = padding;
+
+      const addText = document.createTextNode(text);
+      divElement.appendChild(addText);
+      contain.appendChild(divElement);
+
+      document.body.appendChild(contain);
+    };
+
+    for(let i =0; i< color.length; i++){
+          createDiv(color[i], bgcolor[i], height[0], width[0], text[i], align[0], padding[0]);
+    }
+
+
+//     createDiv('white', '#212121', '200px', '400px', 'my name is Don', 'center', '10%');
+//     createDiv('red', 'yellow', '200px', '400px', 'my name is John Cena', 'center', '10%');
+//     createDiv('green', 'red', '200px', '400px', 'my name is Salman Khan', 'center', '10%');
+//     createDiv('red', 'blue', '200px', '400px', 'my name is Saarukh khan', 'center', '10%');
+//     createDiv('black', 'yellow', '200px', '400px', 'I am Thor, the odin son', 'center', '10%');
+//     createDiv('red', '#212121', '200px', '400px', 'I got you baby', 'center', '10%');
+  </script>
+</html>

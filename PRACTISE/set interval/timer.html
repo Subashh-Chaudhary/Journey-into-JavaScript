@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Set Interval || Counting</title>
+
+          <style>
+                    #center{
+                              margin-top: 20%;
+                              text-align: center;
+                    }
+                    button{
+                              height: 40px;
+                              width: 150px;
+                              font-size: 20px;
+                    }
+          </style>
+</head>
+<body>
+          <div id="center">
+                    <h1><span id="count"></span></h1>
+                    <button id="start">Start Me</button>
+          </div>
+</body>
+
+<script>
+          let count = 11;
+          const counting = document.querySelector('#count');
+          const h1 = document.querySelector('h1');
+          const strt = document.querySelector('#start');
+          let intrvl;
+
+          strt.addEventListener('click', function(){
+                  intrvl = setInterval(function(){
+                    counting.innerHTML = --count;
+                    if(count == 0){
+                              clearInterval(intrvl);
+                              counting.innerHTML = "Click here to download";
+                              counting.style.backgroundColor = 'green';
+                              counting.style.color = 'white';
+                              counting.style.borderRadius = '10px';
+                              strt.setAttribute('disabled', '');
+                    }
+                              
+                    }, 1000)
+          });
+
+          
+</script>
+
+
+</html>

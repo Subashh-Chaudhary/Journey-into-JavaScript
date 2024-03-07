@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Elements</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+
+  <script>
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[2].innerHTML);
+
+    let div = document.createElement("div");
+    console.log(div);
+    div.className = "division";
+    div.id = Math.floor(Math.random() * 10 + 1);
+    div.setAttribute('title', 'Generated title');
+    div.style.backgroundColor = 'red';
+    div.style.padding = '1.5px';
+    div.style.display = 'inline';
+    // div.innerText = "Chai aur code";
+    const addText = document.createTextNode("Chai aur code");
+    div.appendChild(addText);
+    document.body.appendChild(div);
+  </script>
+</html>

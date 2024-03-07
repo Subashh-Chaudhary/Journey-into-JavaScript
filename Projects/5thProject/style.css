@@ -1,0 +1,20 @@
+body{
+          background-color: #414141;
+          color: white;
+          font-size: 25px;
+}
+
+.container{
+          margin: 25% 38%;
+}
+
+table{
+          height: 100px;
+          width: 470px;
+          font: 22px;
+          margin-bottom: 15px;
+}
+
+table, th, td{
+          border: 1px solid #e7e7e7;
+}

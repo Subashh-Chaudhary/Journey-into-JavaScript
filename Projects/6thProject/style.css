@@ -1,0 +1,22 @@
+
+
+body{
+          color: whitesmoke;
+          background-color: #414141;
+}
+
+div{
+          text-align: center;
+          margin-top: 17%;
+
+}
+
+button{
+          height: 40px;
+          width: 200px;
+          color: white;
+          background-color: rgb(42, 42, 42);
+          border-radius: 5px;
+          font-size: 20px;
+
+}

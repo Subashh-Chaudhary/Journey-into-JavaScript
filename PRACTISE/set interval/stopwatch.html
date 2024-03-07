@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Interval || Counting</title>
+
+    <style>
+      #center {
+        margin-top: 20%;
+        text-align: center;
+      }
+      button {
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="center">
+      <h1><span id="count"></span></h1>
+      <button id="start">Start Me</button>
+      <button id="stop">Stop Me</button>
+      <button id="reset">Reset Me</button>
+    </div>
+  </body>
+
+  <script>
+    let count = 0;
+    const counting = document.querySelector("#count");
+    const strt = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+    const reset = document.querySelector("#reset");
+    let intrvl;
+
+    strt.addEventListener("click", function () {
+      intrvl = setInterval(function () {
+        counting.innerHTML = count++;
+      }, 100);
+    });
+
+    stop.addEventListener("click", function () {
+      clearInterval(intrvl);
+    });
+
+    reset.addEventListener("click", function(){
+        counting.innerHTML = "";
+    });
+  </script>
+</html>

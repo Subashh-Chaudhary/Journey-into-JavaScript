@@ -1,0 +1,1 @@
+javaScript is synchronous and sigle threaded language.

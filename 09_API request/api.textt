@@ -1,0 +1,8 @@
+API 
+It is the talking language between two system.
+(API stands for Application Programming Interface. It is a set of rules and protocols that allows different software applications to communicate with each other. APIs define the methods and data formats that developers can use to request and exchange information between different software systems.)
+
+like 
+- language between backEnd and frontEnd
+- language between javaScript and python
+- language between Java and Ruby

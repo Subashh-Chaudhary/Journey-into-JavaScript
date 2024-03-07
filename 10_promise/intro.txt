@@ -1,0 +1,11 @@
+
+Promises
+(Represents the eventual completion(or failure) of an asynchronous operations and it's resulting value)
+
+It is a mechanism for handling asynchronous operations. They provide a way to work with asynchronous code in a more organized and maintainable manner. Promises represent a value that might be available now, or in the future, or not at all.
+
+A Promise has three states:
+
+1. Pending: This is the initial state when the Promise is created and hasn't resolved or rejected yet.
+2. Fulfilled (Resolved): This state represents a successful completion of the operation. In this state, the Promise returns a value.
+3. Rejected: This state represents an error or failure during the operation. In this state, the Promise returns a reason for the failure.
