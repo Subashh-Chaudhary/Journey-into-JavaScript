@@ -9,7 +9,7 @@ hoisting();
 
 
 console.log(`A : ${a}`)
-let a = 1;
+var a = 1;
 
 console.log(`B : ${b}`)
 

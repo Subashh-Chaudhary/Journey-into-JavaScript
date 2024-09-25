@@ -10,7 +10,10 @@
 
 // dosumentation  (tc39.es)
 
-let name = "Subash";
+let name = "Subash"; // single line string
+let namE = `Su
+ba
+sh` // multiline string + able to inject variable within it.(tempelate literal)
 let age = 21;
 let isLoggedIn = false;
 const big = 432n;
@@ -18,7 +21,14 @@ const big = 432n;
 console.log(typeof(big));
 console.log(typeof isLoggedIn);
 console.log(typeof null); // null is object
-console.log(typeof undefined); // return undefined type
+console.log(typeof undefined); // return undefined type'
+
+let day = 2;
+day = "Monday"; // Loosely coupled typed programming language(able to change the type of variable during runtime)
+
+let game; // Declaration of variable;
+game = "Firefire"; // memory allocate
+// Dynamically typed programming language
 
 let id = Symbol("abc");
 let anotherId = Symbol("abc");
@@ -32,4 +42,21 @@ console.log(id == anotherId);
 // null => standalone value
 // undefined => value not assigned
 // symbol => check the uniqueness between two component
+
+
+let a = 10;
+{
+          let a = 30;
+          console.log("inner a = ", a);
+}
+console.log("Outer  a = ", a)
+//blocked scoped
+
+var b = 70;
+{
+          var b = 90;
+          console.log("inner b = ", b);
+}
+console.log("Outer  b = ", b)
+//globally scoped
  

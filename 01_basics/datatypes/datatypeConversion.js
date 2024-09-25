@@ -4,6 +4,7 @@ let pass = 12423;
 console.log(score)
 console.log("Before typecast is " +typeof(score));
 let valueInNumber = Number(score);
+// let valueInNumber = +(score);
 console.log("After typecast is " +typeof(valueInNumber));
 
 console.log(pass)
@@ -27,7 +28,7 @@ console.log(str2);
 
 
 console.log("1" + 2);
-console.log(1 + "2");
+console.log(1 + +"2");
 console.log("1" + 2 + 2);
 console.log(1 + 2 + "2");
 

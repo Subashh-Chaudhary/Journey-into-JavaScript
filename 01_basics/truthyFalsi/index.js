@@ -1,7 +1,7 @@
 // Truthy and Falsi value in js
 
 
-if (document.all) {
+if (null) {
   console.log(`It is Truthy value`);
 } else {
   console.log(`It is Falsi value`);
