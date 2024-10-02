@@ -7,7 +7,7 @@ if(true){
           const b = 23;
           var c = 32;
           let d = 122;
-          console.log(`Inner d: ${a}`)
+          console.log(`Inner d: ${d}`)
 }
 
 // console.log(a);     Blocked scoped

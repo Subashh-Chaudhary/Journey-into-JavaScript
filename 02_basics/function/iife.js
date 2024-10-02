@@ -12,3 +12,10 @@
 (() => {
   console.log("DB Connected...");
 })();
+
+// IIFE
+(
+  () =>{
+    console.log("My name is Subash Tharu...");
+  }
+)();
