@@ -52,3 +52,59 @@ const score1 = 101;
 const score2 = 102;
 
 console.log(Array.of(score, score1, score2));
+
+let myNums = [2, 3, 7, 23, 36, 23,  45, 6, 9, 56, 43];
+
+// let myNums2 = myNums;      reference is also passed
+let myNums2 = [...myNums];    // only pass the value (Deep clonning)
+console.log("myNums: ", myNums)
+console.log("myNums2: ", myNums2)
+
+
+// Spread Operator
+// The spread operator is used to expand or spread elements of an iterable (like an array or object) into individual elements. It’s commonly used in the following scenarios:
+
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+const num = [1, 2, 3];
+const max = Math.max(...num); // 3
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const merged = { ...obj1, ...obj2 }; // { a: 1, b: 3, c: 4 }
+
+
+// Rest Operator
+// The rest operator is used to collect multiple elements into a single array. It is often used in function parameters to gather arguments into an array. Here are some key uses:
+
+function sum(...args) {
+    return args.reduce((acc, curr) => acc + curr, 0);
+}
+console.log(sum(1, 2, 3)); // 6
+
+
+const person = { name: 'Alice', age: 25, city: 'Wonderland' };
+const { name, ...rest } = person; // rest = { age: 25, city: 'Wonderland' }
+
+
+const product = {
+          name: "Apple Watch",
+          price: 23000,
+          discount: 20,
+          isPercent: false,
+}
+
+let {name: productName,  price, discount, ...restProduct} = product;
+
+if(product.isPercent){
+          price -= price * (discount /100);
+}
+else{
+          price -= discount;
+}
+
+console.log(`The price of ${productName} before discount: ${product.price}`);
+console.log(`The price of ${productName} after discount: ${price}`);
+
+
